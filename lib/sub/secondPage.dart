@@ -45,56 +45,62 @@ class _SecondApp extends State<SecondApp> {
                   });
                 })
           ], mainAxisAlignment: MainAxisAlignment.spaceAround),
-          Row(children: <Widget>[
-            GestureDetector(
-              child: Image.asset('repo/images/cow.png', width: 80),
-              onTap: () {
-                _imagePath = 'repo/images/cow.png';
-              },
+          Container(
+            height: 100,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: <Widget>[
+                GestureDetector(
+                  child: Image.asset('repo/images/cow.png', width: 80),
+                  onTap: () {
+                    _imagePath = 'repo/images/cow.png';
+                  },
+                ),
+                GestureDetector(
+                  child: Image.asset('repo/images/pig.png', width: 80),
+                  onTap: () {
+                    _imagePath = 'repo/images/pig.png';
+                  },
+                ),
+                GestureDetector(
+                  child: Image.asset('repo/images/bee.png', width: 80),
+                  onTap: () {
+                    _imagePath = 'repo/images/bee.png';
+                  },
+                ),
+                GestureDetector(
+                  child: Image.asset('repo/images/cat.png', width: 80),
+                  onTap: () {
+                    _imagePath = 'repo/images/cat.png';
+                  },
+                ),
+                GestureDetector(
+                  child: Image.asset('repo/images/dog.png', width: 80),
+                  onTap: () {
+                    _imagePath = 'repo/images/dog.png';
+                  },
+                ),
+                GestureDetector(
+                  child: Image.asset('repo/images/fox.png', width: 80),
+                  onTap: () {
+                    _imagePath = 'repo/images/fox.png';
+                  },
+                ),
+                GestureDetector(
+                  child: Image.asset('repo/images/monkey.png', width: 80),
+                  onTap: () {
+                    _imagePath = 'repo/images/monkey.png';
+                  },
+                ),
+                GestureDetector(
+                  child: Image.asset('repo/images/wolf.png', width: 80),
+                  onTap: () {
+                    _imagePath = 'repo/images/wolf.png';
+                  },
+                ),
+              ],
             ),
-            GestureDetector(
-              child: Image.asset('repo/images/pig.png', width: 80),
-              onTap: () {
-                _imagePath = 'repo/images/pig.png';
-              },
-            ),
-            GestureDetector(
-              child: Image.asset('repo/images/bee.png', width: 80),
-              onTap: () {
-                _imagePath = 'repo/images/bee.png';
-              },
-            ),
-            GestureDetector(
-              child: Image.asset('repo/images/cat.png', width: 80),
-              onTap: () {
-                _imagePath = 'repo/images/cat.png';
-              },
-            ),
-            GestureDetector(
-              child: Image.asset('repo/images/dog.png', width: 80),
-              onTap: () {
-                _imagePath = 'repo/images/dog.png';
-              },
-            ),
-            GestureDetector(
-              child: Image.asset('repo/images/fox.png', width: 80),
-              onTap: () {
-                _imagePath = 'repo/images/fox.png';
-              },
-            ),
-            GestureDetector(
-              child: Image.asset('repo/images/monkey.png', width: 80),
-              onTap: () {
-                _imagePath = 'repo/images/monkey.png';
-              },
-            ),
-            GestureDetector(
-              child: Image.asset('repo/images/wolf.png', width: 80),
-              onTap: () {
-                _imagePath = 'repo/images/wolf.png';
-              },
-            ),
-          ], mainAxisAlignment: MainAxisAlignment.spaceAround),
+          ),
           ElevatedButton(child: Text('동물 추가하기'), onPressed: () {})
         ]),
       ),
