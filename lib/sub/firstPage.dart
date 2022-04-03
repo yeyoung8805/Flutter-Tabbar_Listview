@@ -7,10 +7,13 @@ class FirstApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
+    return Scaffold(body: Container(
       child: Center(
-        child: Text('첫번째 페이지'),
+        child: ListView.builder(itemBuilder: (context, position) {
+          return Card(//리스트뷰의 아이템은 Card로 만든다.
+
+              );
+        }),
       ),
     ));
   }
