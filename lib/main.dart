@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './animalItem.dart';
 import 'package:flutter_tabbar_listview/sub/firstPage.dart';
 import 'package:flutter_tabbar_listview/sub/secondPage.dart';
 
@@ -53,11 +54,31 @@ class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   //애니메이션 동작을 처리할 수 있게 한다.
   TabController? controller;
+  List<Animal> animalList =
+      new List.empty(growable: true); //빈값으로 세팅, growable은 리스트가 가변적으로 증가 가능 의미
 
   @override
   void initState() {
     super.initState();
     controller = TabController(length: 2, vsync: this);
+
+    //각 동물의 정보를 입력
+    animalList.add(
+        Animal(animalName: "벌", kind: "곤충", imagePath: "repo/images/bee.png"));
+    animalList.add(Animal(
+        animalName: "고양이", kind: "포유류", imagePath: "repo/images/cat.png"));
+    animalList.add(Animal(
+        animalName: "젖소", kind: "포유류", imagePath: "repo/images/cow.png"));
+    animalList.add(Animal(
+        animalName: "강아지", kind: "포유류", imagePath: "repo/images/dog.png"));
+    animalList.add(Animal(
+        animalName: "여우", kind: "포유류", imagePath: "repo/images/fox.png"));
+    animalList.add(Animal(
+        animalName: "원숭이", kind: "영장류", imagePath: "repo/images/monkey.png"));
+    animalList.add(Animal(
+        animalName: "돼지", kind: "포유류", imagePath: "repo/images/pig.png"));
+    animalList.add(Animal(
+        animalName: "늑대", kind: "포유류", imagePath: "repo/images/wolf.png"));
   }
 
   @override

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Animal {
-  String? imagePath;
   String? animalName;
   String? kind;
+  String? imagePath;
   bool? flyExist = false;
 
   Animal(
